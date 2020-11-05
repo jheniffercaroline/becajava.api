@@ -1,4 +1,4 @@
-package br.api.model;
+package br.api.locadora.model;
 
 import javax.persistence.*;
 
@@ -6,34 +6,41 @@ import javax.persistence.*;
 public class Veiculo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Id;
+	private long Id;
 	private String Marca;
 	private String Modelo;
 	private String Cor;
-	public int getId() {
+
+	public long getId() {
 		return Id;
 	}
-	public void setId(int id) {
+
+	public void setId(long id) {
 		Id = id;
 	}
+
 	public String getMarca() {
 		return Marca;
 	}
+
 	public void setMarca(String marca) {
 		Marca = marca;
 	}
+
 	public String getModelo() {
 		return Modelo;
 	}
+
 	public void setModelo(String modelo) {
 		Modelo = modelo;
 	}
+
 	public String getCor() {
 		return Cor;
 	}
+
 	public void setCor(String cor) {
 		Cor = cor;
 	}
-	
 
 }

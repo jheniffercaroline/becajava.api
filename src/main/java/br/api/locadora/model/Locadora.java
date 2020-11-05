@@ -1,4 +1,4 @@
-package br.api.model;
+package br.api.locadora.model;
 
 import javax.persistence.*;
 

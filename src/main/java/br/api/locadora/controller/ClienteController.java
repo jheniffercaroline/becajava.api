@@ -1,4 +1,4 @@
-package br.api.controller;
+package br.api.locadora.controller;
 
 public class ClienteController {
 

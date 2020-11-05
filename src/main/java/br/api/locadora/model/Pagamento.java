@@ -1,4 +1,4 @@
-package br.api.model;
+package br.api.locadora.model;
 
 import javax.persistence.*;
 
@@ -6,15 +6,15 @@ import javax.persistence.*;
 public class Pagamento {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Id;
+	private long Id;
 	private double Valor;
 	private String Forma_Pagamento;
 
-	public int getId() {
+	public long getId() {
 		return Id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		Id = id;
 	}
 

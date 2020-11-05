@@ -1,4 +1,4 @@
-package br.api.model;
+package br.api.locadora.model;
 
 import javax.persistence.*;
 
@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Locacao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Id;
+	private long Id;
 	private int Qtd_Dias;
 
 	@ManyToOne
@@ -16,16 +16,16 @@ public class Locacao {
 	@ManyToOne
 	@JoinColumn(name = "ClienteId")
 	private Cliente Cliente;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "PagamentoId")
 	private Pagamento Pagamento;
 
-	public int getId() {
+	public long getId() {
 		return Id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		Id = id;
 	}
 
@@ -60,7 +60,5 @@ public class Locacao {
 	public void setPagamento(Pagamento pagamento) {
 		Pagamento = pagamento;
 	}
-	
-	
 
 }

@@ -1,22 +1,19 @@
-package br.api.model;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package br.api.locadora.model;
+import javax.persistence.*;
 
 @Entity
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Id;
+	private long Id;
 	private String Nome;
 	private String Telefone;
 	private String Cpf;
-	public int getId() {
+	
+	public long getId() {
 		return Id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		Id = id;
 	}
 	public String getNome() {
