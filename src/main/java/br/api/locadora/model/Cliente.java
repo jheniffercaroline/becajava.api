@@ -5,15 +5,15 @@ import javax.persistence.*;
 public class Cliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long Id;
+	private Long Id;
 	private String Nome;
 	private String Telefone;
 	private String Cpf;
 	
-	public long getId() {
+	public Long getId() {
 		return Id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		Id = id;
 	}
 	public String getNome() {

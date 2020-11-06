@@ -11,6 +11,19 @@ public class Veiculo {
 	private String Modelo;
 	private String Cor;
 
+	@ManyToOne
+	@JoinColumn(name = "LocadoraId")
+	private Locadora Locadora;
+	
+
+	public Locadora getLocadora() {
+		return Locadora;
+	}
+
+	public void setLocadora(Locadora locadora) {
+		Locadora = locadora;
+	}
+
 	public long getId() {
 		return Id;
 	}

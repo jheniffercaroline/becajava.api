@@ -26,14 +26,14 @@ public class LocacaoController {
 		_locacaoRepository = locacaoRepository; // Alimentando a propriedade com a construção da classe
 	}
 
-	@PostMapping
-	public ResponseEntity inserir(@RequestBody Locacao locacao) {
-		_locacaoRepository.save(locacao);
-		return ResponseEntity.status(HttpStatus.CREATED).body("Locação criada com sucesso!");
-	}
+//	@PostMapping
+//	public ResponseEntity inserir(@RequestBody Locacao locacao) {
+//		_locacaoRepository.save(locacao);
+//		return ResponseEntity.status(HttpStatus.CREATED).body("Locação criada com sucesso!");
+//	}
 
 //	@GetMapping
-//	public ResponseEntity listar() {
+//	public ResponseEntity obter() {
 //		Iterable<Locacao> locacoes = _locacaoRepository.findAll();
 //		return ResponseEntity.status(HttpStatus.OK).body(locacoes);
 //	}

@@ -13,18 +13,24 @@ public class ClienteService {
 
 	final ClienteRepository _repository;
 
-	@Autowired
+	
 	public ClienteService(ClienteRepository repository) {
 		_repository = repository;
 	}
 
 	public void inserir(Cliente cliente) {
-		cliente.setId(new Long(0));
+		
 		_repository.save(cliente);
 	}
 
 	public List<Cliente> listar() {
 		return _repository.findAll();
 	}
+	public void atualizar(Cliente cliente){
+		 _repository.save(cliente);
+	}
 
+	public void deletar(Long id) {
+		_repository.deleteById(id);
+	}
 }

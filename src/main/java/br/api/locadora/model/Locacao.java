@@ -7,7 +7,8 @@ public class Locacao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long Id;
-	private int Qtd_Dias;
+	private int Valor;
+	
 
 	@ManyToOne
 	@JoinColumn(name = "VeiculoId")
@@ -18,8 +19,17 @@ public class Locacao {
 	private Cliente Cliente;
 
 	@ManyToOne
-	@JoinColumn(name = "PagamentoId")
-	private Pagamento Pagamento;
+	@JoinColumn(name = "FormaPagamentoId")
+
+	private FormaPagamento FormaPagamento;
+
+	public int getValor() {
+		return Valor;
+	}
+
+	public void setValor(int valor) {
+		Valor = valor;
+	}
 
 	public long getId() {
 		return Id;
@@ -27,22 +37,6 @@ public class Locacao {
 
 	public void setId(long id) {
 		Id = id;
-	}
-
-	public int getQtd_Dias() {
-		return Qtd_Dias;
-	}
-
-	public void setQtd_Dias(int qtd_Dias) {
-		Qtd_Dias = qtd_Dias;
-	}
-
-	public Veiculo getVeiculo() {
-		return Veiculo;
-	}
-
-	public void setVeiculo(Veiculo veiculo) {
-		Veiculo = veiculo;
 	}
 
 	public Cliente getCliente() {
@@ -53,12 +47,21 @@ public class Locacao {
 		Cliente = cliente;
 	}
 
-	public Pagamento getPagamento() {
-		return Pagamento;
+	public FormaPagamento getFormaPagamento() {
+		return FormaPagamento;
 	}
 
-	public void setPagamento(Pagamento pagamento) {
-		Pagamento = pagamento;
+	public void setFormaPagamento(FormaPagamento formaPagamento) {
+		FormaPagamento = formaPagamento;
 	}
+
+	public Veiculo getVeiculo() {
+		return Veiculo;
+	}
+
+	public void setVeiculo(Veiculo veiculo) {
+		Veiculo = veiculo;
+	}
+	
 
 }

@@ -8,12 +8,8 @@ public class Locadora {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
-	private String Nome;
 	private String CNPJ;
-
-	@ManyToOne
-	@JoinColumn(name = "VeiculoId")
-	private Veiculo Veiculo;
+	private String Nome;
 
 	public Long getId() {
 		return Id;
@@ -37,14 +33,6 @@ public class Locadora {
 
 	public void setCNPJ(String cNPJ) {
 		CNPJ = cNPJ;
-	}
-
-	public Veiculo getVeiculo() {
-		return Veiculo;
-	}
-
-	public void setVeiculo(Veiculo veiculo) {
-		Veiculo = veiculo;
 	}
 
 }
